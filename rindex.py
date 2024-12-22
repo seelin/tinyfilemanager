@@ -16,7 +16,7 @@ SK_CMCKEY=''
 def hello_world():
    return 'Hello World'
    
-@app.route('/', methods=['GET', 'POST'])
+#@app.route('/', methods=['GET', 'POST'])
 @app.route('/index.php', methods=['GET', 'POST'])
 def forward():
     url = 'http://127.0.0.1/'
