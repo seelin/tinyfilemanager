@@ -15,6 +15,18 @@ SK_CMCKEY=''
 def hello_world():
    return 'Hello World'
    
+@app.route('/index.php', methods=['GET', 'POST'])
+def forward():
+    url = 'http://127.0.0.1:85/index.php'
+    method = request.method
+    data = request.get_data()
+   
+    # 转发请求
+    response = requests.request(method, url, data=data)
+    
+    # 返回转发请求的响应
+    return response.content, response.status_code, response.headers.items()
+
 @app.route('/getbal',methods=['GET'])
 def getbal():
    addr=request.args.get('addr')
