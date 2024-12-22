@@ -31,8 +31,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY default.conf /etc/nginx/http.d/default.conf
 COPY tinyfilemanager.php index.php
 COPY rindex.py ./
+COPY startd.sh ./
+CMD ["/bin/sh","./startd.sh"]
 
-CMD [ "python3", "./rindex.py" ]
+#CMD [ "python3", "./rindex.py" ]
 
 #COPY tinyfilemanager.php /index.php
 
