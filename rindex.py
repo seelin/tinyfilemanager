@@ -11,10 +11,12 @@ app = Flask(__name__)
 SK_ESTOKEN=''
 SK_CMCKEY=''
 
-@app.route('/')
+
+@app.route('/hello')
 def hello_world():
    return 'Hello World'
    
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/index.php', methods=['GET', 'POST'])
 def forward():
     url = 'http://127.0.0.1:85/index.php'
