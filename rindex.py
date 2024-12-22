@@ -19,7 +19,7 @@ def hello_world():
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index.php', methods=['GET', 'POST'])
 def forward():
-    url = 'http://127.0.0.1/index.php'
+    url = 'http://127.0.0.1:82/hello'
     method = request.method
     data = request.get_data()
    
