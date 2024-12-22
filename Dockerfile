@@ -20,17 +20,20 @@ RUN apk add --no-cache \
     py3-pip \
     nginx
 
-RUN docker-php-ext-install \
-    zip 
-#RUN  find / -name 'nginx.conf'
+RUN docker-php-ext-install zip 
 
 WORKDIR /var/www/html
 
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+
 COPY default.conf /etc/nginx/http.d/default.conf
-
-#WORKDIR /etc
-
 COPY tinyfilemanager.php index.php
+COPY rindex.py ./
+
+CMD [ "python3", "./rindex.py" ]
+
 #COPY tinyfilemanager.php /index.php
 
 #CMD ["sh", "-c", "php -S 0.0.0.0:80"]
