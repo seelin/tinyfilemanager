@@ -33,9 +33,9 @@ COPY tinyfilemanager.php index.php
 COPY rindex.py ./
 COPY startd.sh ./
 EXPOSE 80 82 85
-#CMD ["/bin/sh","./startd.sh"]
+CMD ["/bin/sh","./startd.sh"]
 
-CMD [ "python3", "./rindex.py" ]
+#CMD [ "python3", "./rindex.py" ]
 
 #COPY tinyfilemanager.php /index.php
 
