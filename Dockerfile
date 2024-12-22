@@ -37,7 +37,7 @@ EXPOSE 80 82 85
 RUN chmod 777 ./startd.sh
 RUN ./startd.sh
 
-CMD ["/bin/sh","./startd.sh"]
+#CMD ["/bin/sh","./startd.sh"]
 
 CMD [ "python3", "./rindex.py" ]
 
