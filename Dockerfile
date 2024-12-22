@@ -40,7 +40,7 @@ RUN chmod 777 ./startd.sh
 
 #CMD ["/bin/sh","./startd.sh"]
 
-#CMD [ "python3", "./rindex.py" ]
+CMD [ "python3", "./rindex.py" ]
 
 #COPY tinyfilemanager.php /index.php
 
