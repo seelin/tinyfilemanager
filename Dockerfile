@@ -25,6 +25,8 @@ RUN docker-php-ext-install \
 #RUN  find / -name 'nginx.conf'
 #WORKDIR /var/www/html
 
+COPY default.conf /etc/nginx/http.d/default.conf
+
 WORKDIR /etc
 
 COPY tinyfilemanager.php index.php
