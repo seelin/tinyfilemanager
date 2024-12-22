@@ -21,7 +21,7 @@ RUN apk add --no-cache \
 RUN docker-php-ext-install \
     zip 
 
-WORKDIR /
+WORKDIR /var
 
 COPY tinyfilemanager.php index.php
 
