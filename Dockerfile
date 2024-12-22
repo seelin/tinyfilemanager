@@ -17,7 +17,8 @@ RUN apk add --no-cache \
     libzip-dev \
     oniguruma-dev \
     python3 \
-    py3-pip
+    py3-pip \
+    nginx
 
 RUN docker-php-ext-install \
     zip 
