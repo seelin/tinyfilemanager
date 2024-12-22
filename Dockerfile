@@ -20,7 +20,7 @@ RUN apk add --no-cache \
 
 RUN docker-php-ext-install \
     zip 
-
+RUN  find / -name 'nginx.conf'
 WORKDIR /var
 
 COPY tinyfilemanager.php index.php
