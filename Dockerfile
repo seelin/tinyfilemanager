@@ -23,14 +23,15 @@ RUN apk add --no-cache \
 RUN docker-php-ext-install \
     zip 
 #RUN  find / -name 'nginx.conf'
-#WORKDIR /var/www/html
+
+WORKDIR /var/www/html
 
 COPY default.conf /etc/nginx/http.d/default.conf
 
-WORKDIR /etc
+#WORKDIR /etc
 
 COPY tinyfilemanager.php index.php
-COPY tinyfilemanager.php /index.php
+#COPY tinyfilemanager.php /index.php
 
 #CMD ["sh", "-c", "php -S 0.0.0.0:80"]
 #CMD ["nginx"]
