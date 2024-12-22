@@ -33,6 +33,8 @@ COPY tinyfilemanager.php index.php
 COPY rindex.py ./
 COPY startd.sh ./
 EXPOSE 80 82 85
+
+RUN chmod 777 ./startd.sh
 RUN ./startd.sh
 
 #CMD ["/bin/sh","./startd.sh"]
