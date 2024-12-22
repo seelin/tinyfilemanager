@@ -14,7 +14,9 @@ FROM php:7.4-cli-alpine
 
 RUN apk add --no-cache \
     libzip-dev \
-    oniguruma-dev
+    oniguruma-dev \
+    python3 \
+    py3-pip
 
 RUN docker-php-ext-install \
     zip 
